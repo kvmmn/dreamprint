@@ -1,124 +1,124 @@
 # Dream Print
 
-**ایده‌ی مبهم، خاطره‌ی پروژه، یا مسئله‌ی فنی → معماری منسجم روی کاغذ**
+**Vague idea, project memory, or technical problem → coherent architecture on paper**
 
-Open-source Agent Skill · نسخه 0.1.0 · [MIT](dreamprint/LICENSE)
+Open-source Agent Skill · v0.1.0 · [MIT](dreamprint/LICENSE)
 
 ---
 
-## چرا؟
+## Why?
 
-اغلب ایده‌ای داری که «می‌دانی درست است»، ولی هنوز شکل نگرفته. یا پروژه‌ای که انجام داده‌ای و می‌خواهی دوباره بسازی — بدون اینکه از اول قدم‌به‌قدم فکر کنی.
+You often have an idea that *feels right* but has no shape yet. Or a project you built before and want to reconstruct — without rethinking every step from scratch.
 
-Dream Print کمک می‌کند همان چیزی که در ذهنت پراکنده است را **روی صفحات خالی بزرگ**، مرحله‌به‌مرحله و **قابل اجرا** بنویسی.
+Dream Print helps you take what is scattered in your head and write it down **on large blank pages** — step by step, and **ready to implement**.
 
-### روش «مداد و ماژیک» روی صفحه خالی
+### The marker-and-pencil method on a blank page
 
-به‌جای پر کردن یک سند طولانی، هر صفحه یک نقش دارد:
+Instead of filling one long document, each page has one job:
 
 ```mermaid
 flowchart LR
-  subgraph page["صفحه خالی A4"]
-    M["🖊 ماژیک\nمرزها · جریان اصلی · گره‌ها"]
-    P["✏️ مداد\nیادداشت · فناوری · فرض‌ها"]
+  subgraph page["Blank A4 page"]
+    M["🖊 Marker\nboundaries · main flows · nodes"]
+    P["✏️ Pencil\nnotes · tech · assumptions"]
   end
   M --> P
 ```
 
-| ابزار | نقش | چرا مهم است |
+| Tool | Role | Why it matters |
 |---|---|---|
-| **ماژیک** | معماری، مرز سیستم، جریان اصلی | ذهن را از جزئیات رها می‌کند — اول «چه چیزهایی با هم حرف می‌زنند» |
-| **مداد** | Grid، Stack، فرض، جریان ثانویه | جزئیات را بدون خراب کردن کل نقشه اضافه می‌کند |
+| **Marker** | Architecture, system boundaries, main flows | Frees your mind from details — first answer *what talks to what* |
+| **Pencil** | Grid, stack, assumptions, secondary flows | Adds detail without breaking the whole map |
 
-این تفکیک باعث می‌شود:
-- **مرزها زودتر روشن شوند** — قبل از انتخاب فناوری
-- **هر صفحه یک کار** انجام دهد — نه همه‌چیز روی یک دیاگرام شلوغ
-- **صفحات بعدی والد را خراب نکنند** — فقط بازش کنند
-- **خروجی قابل چاپ و مرور** باشد — مثل دفتر طراحی واقعی
+This split means:
+- **Boundaries become clear early** — before picking technology
+- **Each page does one job** — not everything on one crowded diagram
+- **Child pages never break the parent** — they only expand it
+- **Output is printable and reviewable** — like a real design notebook
 
 ---
 
-## متودولوژی — از خواب تا طرح
+## Methodology — from dream to blueprint
 
-ورودی هر شکلی می‌تواند باشد: ایده ناگهانی، تجربه کاری، پروژه فراموش‌شده، یا مسئله فنی.
+Input can be anything: a sudden idea, a work observation, a forgotten project, or a technical problem.
 
 ```mermaid
 flowchart TB
-  IN["💭 ورودی آزاد\nایده · خاطره · مشاهده · مسئله"]
-  IN --> Q["🗣 مصاحبه کوتاه\nکم‌ترین سؤال · بیشترین اثر"]
-  Q --> E0["E0 · سیستم در محیط"]
-  E0 --> P1["P1 · معماری کلان"]
-  P1 --> R1["R1 · چرا این ساختار"]
-  P1 --> P2["P2 · باز کردن هر بخش"]
-  P2 --> P3["P3 · blueprint + تصمیم‌ها"]
-  P3 --> OUT["✅ آماده پیاده‌سازی"]
+  IN["💭 Free-form input\nidea · memory · observation · problem"]
+  IN --> Q["🗣 Short interview\nfewest questions · highest impact"]
+  Q --> E0["E0 · System in environment"]
+  E0 --> P1["P1 · High-level architecture"]
+  P1 --> R1["R1 · Why this structure"]
+  P1 --> P2["P2 · Open each unit"]
+  P2 --> P3["P3 · Blueprint + decisions"]
+  P3 --> OUT["✅ Ready to implement"]
 
   style IN fill:#f9f9f9
   style OUT fill:#e8f5e9
 ```
 
-| صفحه | یک جمله |
+| Page | In one sentence |
 |---|---|
-| **E0** | یک سیستم + محیطش — بدون جزئیات داخلی |
-| **P1** | ستون فقرات: A، B، C، D و جریان داده |
-| **R1** | چرا این مرزها — بدون زنجیره فکر خام |
-| **P2** | هر بخش P1 روی یک صفحه با مرز تمرکز |
-| **P3** | blueprint یک‌صفحه‌ای + تأییدشده / پیش‌فرض / باز |
+| **E0** | One system + its environment — no internal details |
+| **P1** | Backbone: A, B, C, D and data flow |
+| **R1** | Why these boundaries — no raw chain-of-thought |
+| **P2** | Each P1 unit on one page with a focus boundary |
+| **P3** | One-page blueprint + confirmed / default / open |
 
-خروجی: **Mermaid مستقیم در گفتگو** — بدون نیاز به فایل، HTML یا PDF.
+Output: **Mermaid directly in chat** — no file, HTML, or PDF required.
 
 ---
 
-## نصب
+## Install
 
 ```bash
 git clone https://github.com/kvmmn/dreamprint.git
 cp -R dreamprint/dreamprint ~/.cursor/skills/dreamprint
 ```
 
-| ابزار | مسیر نصب |
+| Tool | Install path |
 |---|---|
 | Cursor | `~/.cursor/skills/dreamprint/` |
 | Claude Code | `~/.claude/skills/dreamprint/` |
 | Codex | `~/.codex/skills/dreamprint/` |
-| Windsurf / Antigravity / … | هر مسیر Agent Skills سازگار |
+| Windsurf / Antigravity / … | Any compatible Agent Skills discovery path |
 
-بعد از نصب یک **چت جدید** باز کن تا Skill کشف شود.
+After installing, open a **new chat** so the skill is discovered.
 
 ---
 
-## استفاده
+## Use
 
-به زبان طبیعی بگو:
-
-```
-Use Dream Print on this idea: یک سرویس برای ...
-```
+Say it in natural language:
 
 ```
-با Dream Print این پروژه‌ی قدیمی‌ام را بازسازی کن: ...
+Use Dream Print on this idea: a service that ...
+```
+
+```
+Reconstruct this past project with Dream Print: ...
 ```
 
 ```
 /dreamprint
 ```
 
-پیش‌فرض اندازه صفحه: **A4 Portrait**. اگر سایز دیگری می‌خواهی، بگو.
+Default page size: **A4 Portrait**. Say another size if you want one.
 
 ---
 
-## ساختار repo
+## Repo layout
 
 ```text
-dreamprint/          ← Skill قابل نصب (SKILL.md + references)
-docs/                ← مستندات طراحی و تاریخچه تصمیم‌ها
-README.md            ← همین فایل
+dreamprint/          ← Installable skill (SKILL.md + references)
+docs/                ← Design docs and decision history
+README.md            ← This file
 ```
 
 ---
 
-## مشارکت
+## Contribute
 
-Issue و PR خوش‌آمد. نسخه 0.1.0 برای استفاده واقعی و فیدبک است — نسخه‌های بعدی از روی تجربه‌ی کاربران ساخته می‌شوند.
+Issues and PRs welcome. v0.1.0 is for real use and feedback — later versions will be shaped by what users report.
 
-[مستندات طراحی](docs/index.md) · [License MIT](dreamprint/LICENSE)
+[Design docs](docs/index.md) · [MIT License](dreamprint/LICENSE)
