@@ -1,5 +1,7 @@
 # Interview and recovery
 
+Works with [readiness-gate.md](readiness-gate.md). The gate decides *when* to ask; this file decides *how* to recover and deepen.
+
 ## Cycle
 
 1. Split free-form input into evidence, goal, actors, data, outcomes, gaps.
@@ -15,27 +17,41 @@
 
 ## Question policy
 
-- Fewest questions with highest effect; usually one main question per turn.
-- Never re-ask known information.
-- Focus on goal, actors, data origin, grain, horizon, serving, feedback, constraints.
+- **Always scan first** — even rich docs/repos may leave boundary, ownership, or feedback gaps.
+- Fewest questions with highest effect; usually **one main question per turn**.
+- Never re-ask ✅ confirmed facts.
+- Focus on: goal, actors, data origin, grain, horizon, serving, feedback, constraints.
 - Ranked user answers become preferences as stated.
-- Reasonable assumptions become **design defaults** and must not block progress.
+- Reasonable assumptions become **design defaults** — show in Readiness summary, never silent.
+- Assumptions must not block progress, but user must be able to correct them before pages.
+
+## Adaptive depth (summary)
+
+| Depth | Typical input | Behavior |
+|---|---|---|
+| Light | Strong brief, specs, or repo | 1–2 confirm questions on inferred P1-critical items |
+| Standard | Partial brief or mixed certainty | One question per turn until gate passes |
+| Deep | Vague, memory-only, or conflicting | Option reconstruction + targeted questions |
+
+Full criteria: readiness-gate.md.
 
 ## Option reconstruction
 
-When memory is incomplete, offer 2–4 genuinely different reconstructions that change architecture — not wording variants. Let the user rank, blend, or reject.
+When memory or docs are incomplete or conflicting, offer 2–4 **architecturally different** reconstructions — not wording variants. User ranks, blends, or rejects.
 
 ## Knowledge status
 
-- **Confirmed:** stated by user or source document.
-- **Design default:** current choice, revisable.
-- **Open:** needs final decision; always propose a default.
+- **Confirmed:** user or authoritative source.
+- **Design default:** current choice, revisable; must appear in Readiness summary.
+- **Open:** needs decision; propose default; record in P3.
 
 ## Node and edge criteria
 
 Each node: purpose, input, action, output, boundary/owner, success/failure signal.  
 Each edge: direction + payload.
 
+If you cannot fill these for a P1 unit from confirmed + accepted defaults, the gate has not passed — ask.
+
 ## R1 content
 
-One page covering recovery, analysis, problem split, solution shaping, validation, and readiness to implement. No internal method names or raw chain-of-thought.
+One page: recovery, analysis, problem split, solution shaping, validation, readiness to implement. No internal method names or raw chain-of-thought.
