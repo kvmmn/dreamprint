@@ -51,6 +51,7 @@
 
 - GitHub: https://github.com/kvmmn/dreamprint
 - **v0.1.3** — پروتکل نوبت سخت؛ ⚠️ در عمق شمرده می‌شود؛ بدون proceed صریح هیچ Mermaid
+- **Install UX** — `install.sh` یک‌خطی؛ سطوح Beginner/Intermediate/Advanced؛ Warp + ترمینال‌های رایج
 - **v0.1.2** — gate inline؛ نصب global با copy؛ INSTALL + sync script
 - **v0.1.1** — Readiness Gate اجباری
 
