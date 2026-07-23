@@ -30,5 +30,7 @@ install_copy "$HOME/.codex/skills/dreamprint"
 install_copy "$HOME/.gemini/config/skills/dreamprint"
 install_copy "$HOME/.gemini/antigravity/skills/dreamprint"
 install_copy "$HOME/.codeium/windsurf/skills/dreamprint"
+install_copy "$HOME/.warp/skills/dreamprint"
+install_copy "$HOME/.agents/skills/dreamprint"
 
 echo "Done. Open a new agent chat to reload the skill."

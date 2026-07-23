@@ -2,35 +2,34 @@
 
 **Dream Print** (`dreamprint`) turns vague ideas, past projects, observations, or technical problems into a coherent progressive service architecture — delivered as Mermaid pages in chat.
 
-**Version: 0.1.3** — strict turn protocol; no Mermaid before explicit proceed; ⚠️ counts for depth.
+**Version: 0.1.3** — strict turn protocol; no Mermaid before explicit proceed.
 
 **Repo:** https://github.com/kvmmn/dreamprint
 
-## Install
+## Install (beginner)
 
-The installable package is **this folder** (`SKILL.md` lives here).
+In **Warp**, Terminal, iTerm, Cursor terminal, WSL, or Git Bash:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/kvmmn/dreamprint/main/dreamprint/scripts/install.sh | bash
+```
+
+Or clone first:
 
 ```bash
 git clone https://github.com/kvmmn/dreamprint.git
 cd dreamprint
-export SKILL_SRC="$(pwd)/dreamprint"
+bash dreamprint/scripts/install.sh
 ```
 
-**→ [INSTALL.md](INSTALL.md)** — full per-tool guide (Cursor, Claude, Codex, **Antigravity**, Windsurf, Copilot).
-
-| Tool | Global | Project |
-|---|---|---|
-| Cursor | `~/.cursor/skills/dreamprint/` | `.cursor/skills/dreamprint/` |
-| Claude Code | `~/.claude/skills/dreamprint/` | `.claude/skills/dreamprint/` |
-| Codex | `~/.codex/skills/dreamprint/` | `.codex/skills/dreamprint/` |
-| **Antigravity** | `~/.gemini/config/skills/dreamprint/` | `.agents/skills/dreamprint/` |
-| Windsurf | `~/.codeium/windsurf/skills/dreamprint/` | `.windsurf/skills/dreamprint/` |
+Pick one tool:
 
 ```bash
-# Quick: Cursor + Antigravity global
-ln -sfn "$SKILL_SRC" ~/.cursor/skills/dreamprint
-mkdir -p ~/.gemini/config/skills && ln -sfn "$SKILL_SRC" ~/.gemini/config/skills/dreamprint
+bash dreamprint/scripts/install.sh --warp
+bash dreamprint/scripts/install.sh --cursor
 ```
+
+**→ [INSTALL.md](INSTALL.md)** — Warp, Windows, shells, all tool paths, troubleshooting.
 
 Open a **new chat** after install.
 
@@ -41,11 +40,10 @@ Use Dream Print on this idea: …
 ```
 
 ```
-Reconstruct this past project with Dream Print — interview first, then pages.
+/dreamprint
 ```
 
-The skill **always** runs a readiness gate first (even with full docs). It asks adaptive questions, shows a Readiness summary, and only then produces E0 → P3.
-
+Interview first → Readiness summary → reply **proceed** → pages (E0→P3).  
 Default page size: **A4 Portrait**.
 
 ## Package layout
@@ -54,6 +52,7 @@ Default page size: **A4 Portrait**.
 dreamprint/
 ├── SKILL.md
 ├── INSTALL.md
+├── scripts/install.sh
 ├── scripts/sync-install.sh
 ├── LICENSE · README.md
 ├── agents/openai.yaml
@@ -61,8 +60,6 @@ dreamprint/
 ```
 
 ## Sync local installs
-
-After editing the skill or after `git pull`:
 
 ```bash
 bash dreamprint/scripts/sync-install.sh

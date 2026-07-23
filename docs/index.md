@@ -26,4 +26,4 @@
 
 ## وضعیت
 
-**v0.1.3** — بسته در [`../dreamprint/`](../dreamprint/). پروتکل نوبت سخت: scan → مصاحبه → Readiness → proceed صریح → صفحات. نصب: [`INSTALL.md`](../dreamprint/INSTALL.md) · sync: `bash dreamprint/scripts/sync-install.sh`
+**v0.1.3** — بسته در [`../dreamprint/`](../dreamprint/). پروتکل نوبت سخت. نصب آسان (Warp + همه ترمینال‌ها): [`INSTALL.md`](../dreamprint/INSTALL.md) · `bash dreamprint/scripts/install.sh`

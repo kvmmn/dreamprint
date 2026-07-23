@@ -88,35 +88,37 @@ Output: **Mermaid directly in chat** — no file, HTML, or PDF required.
 
 ## Install
 
-Clone once, then install the inner **`dreamprint/`** folder (contains `SKILL.md`):
+### Beginner (one line)
+
+Works in **Warp**, Terminal.app, iTerm, Cursor terminal, WSL, Git Bash:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/kvmmn/dreamprint/main/dreamprint/scripts/install.sh | bash
+```
+
+Then open a **new agent chat** and say `Use Dream Print on …`.
+
+### Choose a tool
 
 ```bash
 git clone https://github.com/kvmmn/dreamprint.git && cd dreamprint
-export SKILL_SRC="$(pwd)/dreamprint"
+bash dreamprint/scripts/install.sh --cursor        # Cursor
+bash dreamprint/scripts/install.sh --warp          # Warp
+bash dreamprint/scripts/install.sh --claude        # Claude Code
+bash dreamprint/scripts/install.sh --antigravity   # Antigravity
 ```
 
-**Full guide:** [dreamprint/INSTALL.md](dreamprint/INSTALL.md)
+| Tool | Global path |
+|---|---|
+| **Cursor** | `~/.cursor/skills/dreamprint/` |
+| **Warp** | `~/.warp/skills/` + `~/.agents/skills/` |
+| **Claude Code** | `~/.claude/skills/dreamprint/` |
+| **Codex** | `~/.codex/skills/dreamprint/` |
+| **Antigravity** | `~/.gemini/config/skills/dreamprint/` |
+| **Windsurf** | `~/.codeium/windsurf/skills/dreamprint/` |
+| **Copilot** | `.github/skills/dreamprint/` (project) |
 
-| Tool | Global | Project (this repo) |
-|---|---|---|
-| **Cursor** | `~/.cursor/skills/dreamprint/` | `.cursor/skills/dreamprint/` |
-| **Claude Code** | `~/.claude/skills/dreamprint/` | `.claude/skills/dreamprint/` |
-| **Codex** | `~/.codex/skills/dreamprint/` | `.codex/skills/dreamprint/` |
-| **Antigravity** | `~/.gemini/config/skills/dreamprint/` | `.agents/skills/dreamprint/` |
-| **Windsurf** | `~/.codeium/windsurf/skills/dreamprint/` | `.windsurf/skills/dreamprint/` |
-| **Copilot / VS Code** | — | `.github/skills/dreamprint/` |
-
-**Antigravity** also accepts `.agent/skills/` (legacy) and `~/.gemini/antigravity/skills/` on some builds — see [INSTALL.md](dreamprint/INSTALL.md).
-
-```bash
-# Example: global install for Cursor + Antigravity
-ln -sfn "$SKILL_SRC" ~/.cursor/skills/dreamprint
-mkdir -p ~/.gemini/config/skills && ln -sfn "$SKILL_SRC" ~/.gemini/config/skills/dreamprint
-```
-
-Install all tools at once: run the script in [INSTALL.md § Install everywhere](dreamprint/INSTALL.md#install-everywhere-symlink-script).
-
-After install, open a **new chat** (or reload the workspace) so the skill is discovered.
+**Full guide** (terminals, Windows, levels, troubleshooting): [dreamprint/INSTALL.md](dreamprint/INSTALL.md)
 
 ---
 
@@ -153,6 +155,6 @@ README.md            ← This file
 
 ## Contribute
 
-Issues and PRs welcome. **v0.1.3** — strict turn protocol (scan → interview → readiness → proceed → pages). [INSTALL.md](dreamprint/INSTALL.md) · sync: `bash dreamprint/scripts/sync-install.sh`
+Issues and PRs welcome. **v0.1.3** skill · install UX for Warp & all terminals. [INSTALL.md](dreamprint/INSTALL.md) · `bash dreamprint/scripts/install.sh`
 
 [Design docs](docs/index.md) · [Sync policy](docs/09-sync-policy.md) · [MIT License](dreamprint/LICENSE)
