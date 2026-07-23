@@ -49,8 +49,15 @@
 
 ## انتشار
 
-- بسته‌ی عملیاتی v0.1.0 در `dreamprint/` ساخته و برای استفاده محلی نصب شد.
-- انتشار GitHub و refinement نسخه‌های بعدی پس از فیدبک استفاده‌ی واقعی.
+- GitHub: https://github.com/kvmmn/dreamprint (README انگلیسی، assets/etudes)
+- نصب محلی symlink به `dreamprint/` در Cursor، Claude، Codex
+- **v0.1.1** — Readiness Gate اجباری (مصاحبه قبل از خروجی؛ عمق light/standard/deep)
+
+## مصاحبه (v0.1.1)
+
+- حتی با doc/repo کامل، gate اجرا می‌شود
+- Readiness summary قبل از E0 الزامی
+- skip فقط با درخواست صریح کاربر + لیست فرض‌ها
 
 ## باز
 

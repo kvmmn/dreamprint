@@ -2,7 +2,7 @@
 
 **Vague idea, project memory, or technical problem → coherent architecture on paper**
 
-Open-source Agent Skill · v0.1.0 · [MIT](dreamprint/LICENSE)
+Open-source Agent Skill · v0.1.1 · [MIT](dreamprint/LICENSE)
 
 ---
 
@@ -106,14 +106,14 @@ After installing, open a **new chat** so the skill is discovered.
 
 ## Use
 
-Say it in natural language:
+The skill **always interviews first** — even when your docs look complete. It shows a Readiness summary; you confirm; then pages appear.
 
 ```
 Use Dream Print on this idea: a service that ...
 ```
 
 ```
-Reconstruct this past project with Dream Print: ...
+Reconstruct this past project with Dream Print — readiness gate first.
 ```
 
 ```
@@ -137,6 +137,6 @@ README.md            ← This file
 
 ## Contribute
 
-Issues and PRs welcome. v0.1.0 is for real use and feedback — later versions will be shaped by what users report.
+Issues and PRs welcome. **v0.1.1** adds mandatory readiness gate. Design docs and sync policy: [docs/](docs/index.md).
 
-[Design docs](docs/index.md) · [MIT License](dreamprint/LICENSE)
+[Design docs](docs/index.md) · [Sync policy](docs/09-sync-policy.md) · [MIT License](dreamprint/LICENSE)

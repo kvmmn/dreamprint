@@ -1,4 +1,4 @@
 interface:
   display_name: "Dream Print"
-  short_description: "Turn vague ideas and past projects into coherent Mermaid architecture pages."
-  default_prompt: "Use Dream Print to turn my idea or past project into a progressive architecture package (E0, P1, R1, P2, P3)."
+  short_description: "Interview-first service architecture on paper — E0/P1/R1/P2/P3 Mermaid pages."
+  default_prompt: "Use Dream Print. Run the readiness gate and interview first, then produce the architecture package (E0, P1, R1, P2, P3)."

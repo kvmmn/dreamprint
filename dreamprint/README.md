@@ -2,7 +2,9 @@
 
 **Dream Print** (`dreamprint`) turns vague ideas, past projects, observations, or technical problems into a coherent progressive service architecture — delivered as Mermaid pages in chat.
 
-Version: **0.1.0** (first practical release for feedback)
+**Version: 0.1.1** — adaptive interview + mandatory readiness gate before any page.
+
+**Repo:** https://github.com/kvmmn/dreamprint
 
 ## Install
 
@@ -17,42 +19,47 @@ Copy or symlink the `dreamprint/` folder into your agent's skills directory:
 
 ```bash
 git clone https://github.com/kvmmn/dreamprint.git
-cp -R dreamprint/dreamprint ~/.cursor/skills/dreamprint
-
-# or symlink for live edits
-ln -s "$(pwd)/dreamprint" ~/.cursor/skills/dreamprint
+ln -s "$(pwd)/dreamprint/dreamprint" ~/.cursor/skills/dreamprint
 ```
 
-Restart or reload the agent session so the skill is discovered.
+Restart or open a **new chat** so the skill is discovered.
 
 ## Use
 
-Ask in natural language, for example:
+```
+Use Dream Print on this idea: …
+```
 
-- "Use Dream Print on this idea: …"
-- "Reconstruct this past project as an architecture package"
-- "/dreamprint" (if your tool supports explicit skill invocation)
+```
+Reconstruct this past project with Dream Print — interview first, then pages.
+```
 
-Default page size is **A4 Portrait** unless you specify another size.
+The skill **always** runs a readiness gate first (even with full docs). It asks adaptive questions, shows a Readiness summary, and only then produces E0 → P3.
+
+Default page size: **A4 Portrait**.
 
 ## Package layout
 
 ```text
 dreamprint/
 ├── SKILL.md
-├── LICENSE
-├── README.md
+├── LICENSE · README.md
 ├── agents/openai.yaml
 └── references/
+    ├── readiness-gate.md
     ├── interview-and-recovery.md
     ├── output-contract.md
     ├── visual-layout.md
     └── snappstore-example.md
 ```
 
+## Sync
+
+Single source of truth: this folder. Local installs should symlink here. See [../docs/09-sync-policy.md](../docs/09-sync-policy.md).
+
 ## Contribute
 
-Issues and PRs welcome. Keep `SKILL.md` under 500 lines; put detail in `references/`. Design history lives in `../docs/` and is not required for runtime.
+Issues and PRs welcome. Bump `metadata.version` in SKILL.md with each release.
 
 ## License
 
