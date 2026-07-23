@@ -26,4 +26,4 @@
 
 ## وضعیت
 
-**v0.1.1** — بسته‌ی قابل نصب در [`../dreamprint/`](../dreamprint/). شامل **Readiness Gate** اجباری (مصاحبه تطبیقی قبل از خروجی). منبع حقیقت: پوشه‌ی `dreamprint/`؛ GitHub و نصب محلی symlink از همین پوشه.
+**v0.1.2** — بسته در [`../dreamprint/`](../dreamprint/). Readiness Gate (inline در SKILL.md) · نصب global با **copy** · راهنمای نصب: [`INSTALL.md`](../dreamprint/INSTALL.md) · sync: `bash dreamprint/scripts/sync-install.sh`

@@ -54,19 +54,19 @@ Default page size: **A4 Portrait**.
 dreamprint/
 ├── SKILL.md
 ├── INSTALL.md
+├── scripts/sync-install.sh
 ├── LICENSE · README.md
 ├── agents/openai.yaml
-└── references/
-    ├── readiness-gate.md
-    ├── interview-and-recovery.md
-    ├── output-contract.md
-    ├── visual-layout.md
-    └── snappstore-example.md
+└── references/ …
 ```
 
-## Sync
+## Sync local installs
 
-Single source of truth: this folder. Local installs should symlink here. See [../docs/09-sync-policy.md](../docs/09-sync-policy.md).
+After editing the skill or after `git pull`:
+
+```bash
+bash dreamprint/scripts/sync-install.sh
+```
 
 ## Contribute
 

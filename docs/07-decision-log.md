@@ -49,15 +49,21 @@
 
 ## انتشار
 
-- GitHub: https://github.com/kvmmn/dreamprint (README انگلیسی، assets/etudes)
-- نصب محلی symlink به `dreamprint/` در Cursor، Claude، Codex
-- **v0.1.1** — Readiness Gate اجباری (مصاحبه قبل از خروجی؛ عمق light/standard/deep)
+- GitHub: https://github.com/kvmmn/dreamprint
+- **v0.1.2** — gate inline در SKILL.md؛ نصب global با copy؛ `INSTALL.md` + `scripts/sync-install.sh`
+- **v0.1.1** — Readiness Gate اجباری (light/standard/deep)
 
-## مصاحبه (v0.1.1)
+## مصاحبه
 
 - حتی با doc/repo کامل، gate اجرا می‌شود
-- Readiness summary قبل از E0 الزامی
-- skip فقط با درخواست صریح کاربر + لیست فرض‌ها
+- Readiness summary قبل از E0
+- agent فقط `{skill-root}/references/` — نه `docs/` یا مسیر dev
+- skip فقط با درخواست صریح + لیست فرض‌ها
+
+## نصب
+
+- **copy** → `~/.cursor/skills/` و بقیه (استفاده در پروژه‌های دیگر)
+- **symlink** → فقط `.cursor/skills/` داخل repo (توسعه)
 
 ## باز
 

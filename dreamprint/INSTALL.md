@@ -159,29 +159,29 @@ If your Copilot build uses Agent Skills, the same `SKILL.md` format applies. Che
 
 ---
 
-## Install everywhere (symlink script)
+Re-run after `git pull`:
 
-From the repo root after clone:
+```bash
+bash dreamprint/scripts/sync-install.sh
+```
+
+<details>
+<summary>Manual install-all (copy, not symlink)</summary>
 
 ```bash
 SKILL_SRC="$(pwd)/dreamprint"
-mkdir -p ~/.cursor/skills ~/.claude/skills ~/.codex/skills \
-         ~/.gemini/config/skills ~/.gemini/antigravity/skills \
-         ~/.codeium/windsurf/skills .agents/skills .cursor/skills .claude/skills .codex/skills
-
-ln -sfn "$SKILL_SRC" ~/.cursor/skills/dreamprint
-ln -sfn "$SKILL_SRC" ~/.claude/skills/dreamprint
-ln -sfn "$SKILL_SRC" ~/.codex/skills/dreamprint
-ln -sfn "$SKILL_SRC" ~/.gemini/config/skills/dreamprint
-ln -sfn "$SKILL_SRC" ~/.gemini/antigravity/skills/dreamprint
-ln -sfn "$SKILL_SRC" ~/.codeium/windsurf/skills/dreamprint
-ln -sfn "$SKILL_SRC" .agents/skills/dreamprint
-ln -sfn "$SKILL_SRC" .cursor/skills/dreamprint
-ln -sfn "$SKILL_SRC" .claude/skills/dreamprint
-ln -sfn "$SKILL_SRC" .codex/skills/dreamprint
-
-echo "Done. Open a new agent chat in each tool."
+for dest in \
+  "$HOME/.cursor/skills/dreamprint" \
+  "$HOME/.claude/skills/dreamprint" \
+  "$HOME/.codex/skills/dreamprint" \
+  "$HOME/.gemini/config/skills/dreamprint" \
+  "$HOME/.gemini/antigravity/skills/dreamprint" \
+  "$HOME/.codeium/windsurf/skills/dreamprint"; do
+  rm -rf "$dest" && cp -R "$SKILL_SRC" "$dest" && echo "copied $dest"
+done
 ```
+
+</details>
 
 ---
 
