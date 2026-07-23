@@ -12,6 +12,24 @@ After install: **open a new chat / reload the agent** so skills are discovered.
 
 ---
 
+## Symlink vs copy (important)
+
+| Method | Best for | Side effect |
+|---|---|---|
+| **`cp -R`** | Daily use in **other projects** | Agent reads `~/.cursor/skills/dreamprint/…` — stays inside the install folder |
+| **`ln -s`** | **Developing** the skill in `_dreamprint/` | Agent resolves to the **real dev path** (`…/_dreamprint/dreamprint/references/…`) and Cursor may ask permission for that folder |
+
+If you see prompts pointing at `_dreamprint` while working in another project, you installed with a **symlink to the dev repo**. Fix:
+
+```bash
+rm ~/.cursor/skills/dreamprint   # remove symlink
+cp -R /path/to/dreamprint/dreamprint ~/.cursor/skills/dreamprint
+```
+
+Re-run `cp -R` after `git pull` to update a copy install. Use symlink only while editing the skill source.
+
+---
+
 ## Cursor
 
 | Scope | Path |
@@ -22,11 +40,11 @@ After install: **open a new chat / reload the agent** so skills are discovered.
 Cursor also loads skills from `.claude/skills/` and `.codex/skills/` in the same project.
 
 ```bash
-# Global — symlink (stays in sync when you edit the clone)
-ln -sfn "$SKILL_SRC" ~/.cursor/skills/dreamprint
-
-# Or copy once
+# Global — copy (recommended for use in other projects)
 cp -R "$SKILL_SRC" ~/.cursor/skills/dreamprint
+
+# Global — symlink (dev only: live edits, but reads resolve to source path)
+ln -sfn "$SKILL_SRC" ~/.cursor/skills/dreamprint
 ```
 
 **Use:** `"Use Dream Print on …"` or invoke `/dreamprint` if your build supports skill commands.

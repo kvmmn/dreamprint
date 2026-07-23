@@ -2,7 +2,7 @@
 
 **Vague idea, project memory, or technical problem → coherent architecture on paper**
 
-Open-source Agent Skill · v0.1.1 · [MIT](dreamprint/LICENSE)
+Open-source Agent Skill · v0.1.2 · [MIT](dreamprint/LICENSE)
 
 ---
 

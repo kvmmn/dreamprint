@@ -2,7 +2,7 @@
 
 **Dream Print** (`dreamprint`) turns vague ideas, past projects, observations, or technical problems into a coherent progressive service architecture — delivered as Mermaid pages in chat.
 
-**Version: 0.1.1** — adaptive interview + mandatory readiness gate before any page.
+**Version: 0.1.2** — inline readiness gate; copy install avoids dev-folder reads.
 
 **Repo:** https://github.com/kvmmn/dreamprint
 

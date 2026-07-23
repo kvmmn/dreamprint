@@ -12,18 +12,25 @@ _dreamprint/
 
 **هر تغییری فقط در `_dreamprint/` اعمال شود.** سپس commit + push به GitHub.
 
-## نصب محلی (خودکار با symlink)
+## نصب محلی
+
+| روش | کاربرد |
+|---|---|
+| **symlink** | توسعه skill در `_dreamprint/` — ویرایش زنده |
+| **copy** | استفاده در پروژه‌های دیگر — agent فقط `~/.*/skills/dreamprint/` را می‌خواند |
+
+⚠️ symlink باعث می‌شود Cursor مسیر واقعی `_dreamprint/dreamprint/references/` را بخواند.
 
 | مسیر | نوع |
 |---|---|
-| `~/.cursor/skills/dreamprint` | symlink → `dreamprint/` |
-| `~/.claude/skills/dreamprint` | symlink → `dreamprint/` |
-| `~/.codex/skills/dreamprint` | symlink → `dreamprint/` |
+| `~/.cursor/skills/dreamprint` | **copy** (استفاده روزمره) |
+| `~/.claude/skills/dreamprint` | **copy** |
+| `~/.codex/skills/dreamprint` | **copy** |
 | `~/.gemini/config/skills/dreamprint` | symlink → `dreamprint/` (Antigravity global) |
 | `~/.gemini/antigravity/skills/dreamprint` | symlink → `dreamprint/` (Antigravity fallback) |
 | `~/.codeium/windsurf/skills/dreamprint` | symlink → `dreamprint/` (Windsurf global) |
 | `.agents/skills/dreamprint` (در repo) | symlink → `dreamprint/` (Antigravity/Windsurf project) |
-| `.cursor/skills/dreamprint` (در repo) | symlink → `dreamprint/` |
+| `.cursor/skills/dreamprint` (در repo) | symlink → `dreamprint/` (توسعه) |
 | `.claude/skills/dreamprint` (در repo) | symlink → `dreamprint/` |
 | `.codex/skills/dreamprint` (در repo) | symlink → `dreamprint/` |
 
