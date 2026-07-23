@@ -36,6 +36,23 @@ This split means:
 - **Child pages never break the parent** — they only expand it
 - **Output is printable and reviewable** — like a real design notebook
 
+### From the notebook
+
+Real etudes from the author's design notebook — marker for the backbone, pencil for opening one unit.
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/etude-1.png" alt="Notebook etude — P1 backbone architecture" width="100%" />
+      <br /><sub><strong>P1</strong> — POS/QR → Platform → Forecasting → Procurement</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/etude-2.png" alt="Notebook etude — P2 forecasting service detail" width="100%" />
+      <br /><sub><strong>P2</strong> — Inside the forecasting service (C1–C8, focus boundary)</sub>
+    </td>
+  </tr>
+</table>
+
 ---
 
 ## Methodology — from dream to blueprint
@@ -112,6 +129,7 @@ Default page size: **A4 Portrait**. Say another size if you want one.
 ```text
 dreamprint/          ← Installable skill (SKILL.md + references)
 docs/                ← Design docs and decision history
+assets/              ← Notebook etudes and visuals
 README.md            ← This file
 ```
 
