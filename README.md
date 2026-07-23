@@ -2,7 +2,7 @@
 
 **Vague idea, project memory, or technical problem → coherent architecture on paper**
 
-Open-source Agent Skill · v0.1.2 · [MIT](dreamprint/LICENSE)
+Open-source Agent Skill · v0.1.3 · [MIT](dreamprint/LICENSE)
 
 ---
 
@@ -153,6 +153,6 @@ README.md            ← This file
 
 ## Contribute
 
-Issues and PRs welcome. **v0.1.2** — inline readiness gate, copy install, [INSTALL.md](dreamprint/INSTALL.md). Sync locals: `bash dreamprint/scripts/sync-install.sh`
+Issues and PRs welcome. **v0.1.3** — strict turn protocol (scan → interview → readiness → proceed → pages). [INSTALL.md](dreamprint/INSTALL.md) · sync: `bash dreamprint/scripts/sync-install.sh`
 
 [Design docs](docs/index.md) · [Sync policy](docs/09-sync-policy.md) · [MIT License](dreamprint/LICENSE)

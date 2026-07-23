@@ -1,6 +1,6 @@
 # مشخصات ساخت Skill — Dream Print
 
-پیاده‌سازی: [`../dreamprint/`](../dreamprint/) · **نسخه: 0.1.2**
+پیاده‌سازی: [`../dreamprint/`](../dreamprint/) · **نسخه: 0.1.3**
 
 ## ساختار بسته
 
@@ -33,5 +33,6 @@ dreamprint/
 |---|---|
 | 1–4 | نام، بسته، GitHub، assets |
 | 5 | v0.1.1 readiness gate |
-| 6 | v0.1.2 inline gate + copy install + INSTALL.md |
-| 7 | **بعدی:** فیدبک → v0.2 |
+| 6 | v0.1.2 inline gate + copy install |
+| 7 | v0.1.3 strict turn protocol + honest ⚠️ marking |
+| 8 | **بعدی:** فیدبک → v0.2 |

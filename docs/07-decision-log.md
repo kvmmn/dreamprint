@@ -50,15 +50,17 @@
 ## انتشار
 
 - GitHub: https://github.com/kvmmn/dreamprint
-- **v0.1.2** — gate inline در SKILL.md؛ نصب global با copy؛ `INSTALL.md` + `scripts/sync-install.sh`
-- **v0.1.1** — Readiness Gate اجباری (light/standard/deep)
+- **v0.1.3** — پروتکل نوبت سخت؛ ⚠️ در عمق شمرده می‌شود؛ بدون proceed صریح هیچ Mermaid
+- **v0.1.2** — gate inline؛ نصب global با copy؛ INSTALL + sync script
+- **v0.1.1** — Readiness Gate اجباری
 
 ## مصاحبه
 
-- حتی با doc/repo کامل، gate اجرا می‌شود
-- Readiness summary قبل از E0
-- agent فقط `{skill-root}/references/` — نه `docs/` یا مسیر dev
-- skip فقط با درخواست صریح + لیست فرض‌ها
+- doc کامل ≠ ✅؛ استنباط از سند = ⚠️
+- هر نوبت یک فاز: scan | سؤال | readiness | صفحات
+- حداقل ۱–۳ نوبت پاسخ‌داده‌شده قبل از Readiness (بسته به عمق)
+- سیستم‌های creative/presence → حداقل Standard
+- بدون پیام proceed کاربر → ممنوعیت کامل E0–P3
 
 ## نصب
 
