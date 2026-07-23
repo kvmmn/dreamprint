@@ -88,19 +88,35 @@ Output: **Mermaid directly in chat** — no file, HTML, or PDF required.
 
 ## Install
 
+Clone once, then install the inner **`dreamprint/`** folder (contains `SKILL.md`):
+
 ```bash
-git clone https://github.com/kvmmn/dreamprint.git
-cp -R dreamprint/dreamprint ~/.cursor/skills/dreamprint
+git clone https://github.com/kvmmn/dreamprint.git && cd dreamprint
+export SKILL_SRC="$(pwd)/dreamprint"
 ```
 
-| Tool | Install path |
-|---|---|
-| Cursor | `~/.cursor/skills/dreamprint/` |
-| Claude Code | `~/.claude/skills/dreamprint/` |
-| Codex | `~/.codex/skills/dreamprint/` |
-| Windsurf / Antigravity / … | Any compatible Agent Skills discovery path |
+**Full guide:** [dreamprint/INSTALL.md](dreamprint/INSTALL.md)
 
-After installing, open a **new chat** so the skill is discovered.
+| Tool | Global | Project (this repo) |
+|---|---|---|
+| **Cursor** | `~/.cursor/skills/dreamprint/` | `.cursor/skills/dreamprint/` |
+| **Claude Code** | `~/.claude/skills/dreamprint/` | `.claude/skills/dreamprint/` |
+| **Codex** | `~/.codex/skills/dreamprint/` | `.codex/skills/dreamprint/` |
+| **Antigravity** | `~/.gemini/config/skills/dreamprint/` | `.agents/skills/dreamprint/` |
+| **Windsurf** | `~/.codeium/windsurf/skills/dreamprint/` | `.windsurf/skills/dreamprint/` |
+| **Copilot / VS Code** | — | `.github/skills/dreamprint/` |
+
+**Antigravity** also accepts `.agent/skills/` (legacy) and `~/.gemini/antigravity/skills/` on some builds — see [INSTALL.md](dreamprint/INSTALL.md).
+
+```bash
+# Example: global install for Cursor + Antigravity
+ln -sfn "$SKILL_SRC" ~/.cursor/skills/dreamprint
+mkdir -p ~/.gemini/config/skills && ln -sfn "$SKILL_SRC" ~/.gemini/config/skills/dreamprint
+```
+
+Install all tools at once: run the script in [INSTALL.md § Install everywhere](dreamprint/INSTALL.md#install-everywhere-symlink-script).
+
+After install, open a **new chat** (or reload the workspace) so the skill is discovered.
 
 ---
 

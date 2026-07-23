@@ -19,6 +19,10 @@ _dreamprint/
 | `~/.cursor/skills/dreamprint` | symlink → `dreamprint/` |
 | `~/.claude/skills/dreamprint` | symlink → `dreamprint/` |
 | `~/.codex/skills/dreamprint` | symlink → `dreamprint/` |
+| `~/.gemini/config/skills/dreamprint` | symlink → `dreamprint/` (Antigravity global) |
+| `~/.gemini/antigravity/skills/dreamprint` | symlink → `dreamprint/` (Antigravity fallback) |
+| `~/.codeium/windsurf/skills/dreamprint` | symlink → `dreamprint/` (Windsurf global) |
+| `.agents/skills/dreamprint` (در repo) | symlink → `dreamprint/` (Antigravity/Windsurf project) |
 | `.cursor/skills/dreamprint` (در repo) | symlink → `dreamprint/` |
 | `.claude/skills/dreamprint` (در repo) | symlink → `dreamprint/` |
 | `.codex/skills/dreamprint` (در repo) | symlink → `dreamprint/` |
