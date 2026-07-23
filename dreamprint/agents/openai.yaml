@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dream Print"
+  short_description: "Turn vague ideas and past projects into coherent Mermaid architecture pages."
+  default_prompt: "Use Dream Print to turn my idea or past project into a progressive architecture package (E0, P1, R1, P2, P3)."

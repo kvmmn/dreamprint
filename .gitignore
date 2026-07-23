@@ -1,0 +1,12 @@
+# Local skill symlinks (install via copy/symlink from dreamprint/)
+.cursor/
+.claude/
+.codex/
+
+# OS & editor
+.DS_Store
+*.swp
+*.swo
+
+# Raw brainstorming scratch (design history is in docs/)
+_dreamprint_firstrun
